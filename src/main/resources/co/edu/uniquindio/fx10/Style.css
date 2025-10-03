@@ -1,0 +1,72 @@
+/* General Scene Style */
+.root {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Container Styles */
+.view-container {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+/* Label Styles */
+.title-label {
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 28px;
+}
+
+.header-label {
+    -fx-text-fill: #34495e;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.form-label {
+    -fx-text-fill: #34495e;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Button Base Style */
+.button {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+    -fx-font-weight: bold;
+}
+
+/* Specific Button Styles */
+.button-primary {
+    -fx-background-color: #3498db;
+    -fx-padding: 10 20;
+}
+
+.button-success {
+    -fx-background-color: #27ae60;
+    -fx-padding: 10 20;
+}
+
+.button-danger {
+    -fx-background-color: #e74c3c;
+    -fx-font-size: 13px;
+    -fx-padding: 8 16;
+}
+
+.button-secondary {
+     -fx-background-color: #95a5a6;
+     -fx-padding: 10 25;
+}
+
+/* ID specific for larger padding */
+#btnSave {
+    -fx-padding: 10 25;
+}
+
+
+/* TextField Style */
+.text-field {
+    -fx-font-size: 14px;
+    -fx-padding: 8;
+}

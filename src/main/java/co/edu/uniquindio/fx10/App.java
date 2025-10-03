@@ -7,18 +7,19 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * Clase principal de la aplicación JavaFX
+ * Main class for the JavaFX application
  */
 public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(App.class.getResource("/co/edu/uniquindio/fx10/vista/Dashboard.fxml"));
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("/co/edu/uniquindio/fx10/view/Dashboard.fxml"));
         Parent root = loader.load();
 
         Scene scene = new Scene(root, 900, 600);
+        scene.getStylesheets().add(getClass().getResource("/co/edu/uniquindio/fx10/Style.css").toExternalForm());
         
-        primaryStage.setTitle("Sistema de Gestión de Productos");
+        primaryStage.setTitle("Product Management System");
         primaryStage.setScene(scene);
         primaryStage.setMinWidth(800);
         primaryStage.setMinHeight(500);
@@ -29,4 +30,3 @@ public class App extends Application {
         launch(args);
     }
 }
-

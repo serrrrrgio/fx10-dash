@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.uniquindio.fx10.controller.ProductFormController"
+      spacing="20">
+    
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <Label text="Crear Nuevo Producto" styleClass="title-label">
+        <font>
+            <Font name="System Bold" size="28"/>
+        </font>
+    </Label>
+
+    <VBox spacing="15" styleClass="view-container">
+        <padding>
+            <Insets top="30" right="30" bottom="30" left="30"/>
+        </padding>
+
+        <GridPane hgap="15" vgap="20">
+            <Label text="Código:" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="form-label"/>
+            <TextField fx:id="txtCode" promptText="Ingrese el código del producto" 
+                       GridPane.columnIndex="1" GridPane.rowIndex="0"
+                       styleClass="text-field"/>
+
+            <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="form-label"/>
+            <TextField fx:id="txtName" promptText="Ingrese el nombre del producto" 
+                       GridPane.columnIndex="1" GridPane.rowIndex="1"
+                       styleClass="text-field"/>
+
+            <Label text="Descripción:" GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="form-label"/>
+            <TextField fx:id="txtDescription" promptText="Ingrese la descripción del producto" 
+                       GridPane.columnIndex="1" GridPane.rowIndex="2"
+                       styleClass="text-field"/>
+
+            <Label text="Precio:" GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="form-label"/>
+            <TextField fx:id="txtPrice" promptText="Ingrese el precio" 
+                       GridPane.columnIndex="1" GridPane.rowIndex="3"
+                       styleClass="text-field"/>
+
+            <Label text="Stock:" GridPane.columnIndex="0" GridPane.rowIndex="4" styleClass="form-label"/>
+            <TextField fx:id="txtStock" promptText="Ingrese la cantidad en stock" 
+                       GridPane.columnIndex="1" GridPane.rowIndex="4"
+                       styleClass="text-field"/>
+
+            <columnConstraints>
+                <ColumnConstraints minWidth="120" prefWidth="120"/>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="300"/>
+            </columnConstraints>
+        </GridPane>
+
+        <HBox spacing="15" alignment="CENTER_RIGHT">
+            <VBox.margin>
+                <Insets top="20"/>
+            </VBox.margin>
+            <Button fx:id="btnCancel" text="Cancelar" onAction="#onCancel" styleClass="button-secondary"/>
+            <Button fx:id="btnSave" text="Guardar Producto" onAction="#onSaveProduct" styleClass="button-success"/>
+        </HBox>
+    </VBox>
+
+</VBox>
